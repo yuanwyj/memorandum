@@ -1,0 +1,4 @@
+/**app.wxss**/
+page {
+  background: rgb(246,246,246);
+}

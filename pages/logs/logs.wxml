@@ -1,0 +1,12 @@
+<!--logs.wxml-->
+<view class="wrapper">
+  <view class="even">
+    <view class="top">
+      <view bindtap="changeEven" class="icon">
+        <icon wx:if="{{isend}}" type="success_no_circle" size="15" />
+      </view>
+      <view class="evenname">{{evenname}}</view>
+    </view>
+    <textarea bindblur="addDetail" placeholder=" 添加备忘 " value="{{ detail }}" />
+  </view>
+</view>

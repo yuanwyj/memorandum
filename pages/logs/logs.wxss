@@ -1,0 +1,39 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+.wrapper {
+  padding-left: .7rem;
+  padding-right: .7rem;
+  padding-top: .3rem;
+}
+.top {
+  display: flex;
+  background: #fff;
+  height: 90rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  align-items: center;
+}
+.top .icon {
+  width: 32rpx;
+  height: 32rpx;
+  border: 1px solid rgb(25,185,234);
+  border-radius: 50%;
+  margin-left: 20rpx;
+}
+.top .evenname {
+  margin-left: 20rpx;
+}
+.even textarea {
+  background: #fff;
+  margin-top: 2rpx;
+  padding-top: 20rpx;
+  padding-left: 72rpx;
+  padding-right: 15rpx;
+  width: auto;
+}

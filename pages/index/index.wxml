@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<!--<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>-->
+
+<view class="wrapper">
+    <!--添加事项输入框-->
+    <view class="add-even">
+      <view class="plus">+</view>
+      <input placeholder="准备做什么?" value="{{ evenName }}" confirm-type="next" bindconfirm="addEvent" focus="{{focus}}"/>
+    </view>
+    <!--未完成事项列表-->
+    <view class="even">
+      <view class="list" wx:for="{{unfinishEven}}">
+        <view class="statu" bindtap="changeEven"  data-objectId="{{item.objectId}}"></view>
+        <view bindtap="addDetail" data-objectId="{{item.objectId}}" class="evenname">{{item.evenname}}</view>
+      </view>
+    </view>
+    <view wx:if="{{ finishEven.length > 0 }}" class="showbtn" bindtap="showFinish"> {{showbtn}} </view>
+    <!--已完成事件列表-->
+    <view wx:if="{{ isShow }}" class="even">
+      <view class="list" wx:for="{{finishEven}}">
+        <icon type="success" size="20" color="rgb(25,185,234)"/>
+        <view  bindtap="addDetail" data-objectId="{{item.objectId}}" class="evenname">{{item.evenname}}</view>
+    
+           <icon bindtap="delEven" data-id="{{item.objectId}}" type="clear" size="20" />
+      </view>      
+    </view>
+    <!--add事项按钮-->
+    <view class="btn" bindtap="addbtn">+</view>
+</view>
